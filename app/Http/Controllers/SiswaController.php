@@ -59,7 +59,7 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nisn' => ['required', 'integer', 'unique:siswa'],
+            'nisn' => ['required', 'unique:siswa'],
             'nis' => ['required', 'integer'],
             'nama' => ['required', 'string'],
             'kelas' => ['required'],

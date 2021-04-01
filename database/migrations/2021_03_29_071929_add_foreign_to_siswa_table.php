@@ -16,7 +16,7 @@ class AddForeignToSiswaTable extends Migration
         Schema::table('siswa', function (Blueprint $table) {
             $table->foreign('id_kelas')
                     ->references('id')->on('kelas')
-                    ->onDelete('restrict');
+                    ->onDelete('cascade');
         });
     }
 

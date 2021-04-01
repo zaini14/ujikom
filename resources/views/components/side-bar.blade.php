@@ -67,7 +67,7 @@
     		<div
     			class="relative px-14">
     			<a 
-    				href="#"
+    				href="{{ url('/riwayat') }}"
     				class="dash-link block py-3 text-md text-palletefont my-1">Riwayat Pembayaran</a>
     		</div>
     	</div>

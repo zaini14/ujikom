@@ -38,3 +38,13 @@ html {
     width : 50%;
     margin :auto;
 }
+
+.cari__transaksi::before {
+	content: '';
+	position: absolute;
+	border-bottom : 30px solid white;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	top:-28px;
+	left:30px;
+}

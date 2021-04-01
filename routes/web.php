@@ -7,6 +7,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\SppController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\RiwayatController;
 
 
 use App\Models\Siswa;
@@ -48,10 +49,15 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
 
 	// // Pembayaran
 	Route::resource('/transaksi', PembayaranController::class);
+	Route::get('/transaksi/bayar/{id}', [PembayaranController::class, 'bayar']);
 
 	// Petugas
 	Route::resource('/petugas', PetugasController::class);
 
 	// Guru 
 	Route::resource('/guru', GuruController::class);
+
+	// Riwayat
+	Route::get('/riwayat', [RiwayatController::class, 'index']);
+	Route::get('/riwayat/cetak', [RiwayatController::class, 'cetakPdf']);
 });
